@@ -8,11 +8,11 @@ const apps = [
     icon: '🔥',
     color: '#ba6bffff',
     features: [
-      'Track Your Fasting Journey with Precision - Smart timer with milestone notifications and progress tracking that automatically extends beyond your target time to measure your achievement',
-      'Monitor Your Health Transformation - Log weight and body fat measurements with each fast to visualize your progress over time',
-      'Understand the Science of Fasting - Learn what happens in your body at every stage with an interactive timeline and access to 25+ curated fasting resources',
-      'Complete Fasting History - Review all your past fasts, edit details, and export your data whenever you need it',
-      'Beautiful & Intuitive Design - Seamless experience with dark mode support and a clean interface that makes tracking effortless'
+      { short: 'Smart timer tracking', detail: 'Track Your Fasting Journey with Precision - Smart timer with milestone notifications and progress tracking that automatically extends beyond your target time to measure your achievement' },
+      { short: 'Health metrics monitoring', detail: 'Monitor Your Health Transformation - Log weight and body fat measurements with each fast to visualize your progress over time' },
+      { short: 'Fasting science education', detail: 'Understand the Science of Fasting - Learn what happens in your body at every stage with an interactive timeline and access to 25+ curated fasting resources' },
+      { short: 'Complete fasting history', detail: 'Complete Fasting History - Review all your past fasts, edit details, and export your data whenever you need it' },
+      { short: 'Beautiful intuitive design', detail: 'Beautiful & Intuitive Design - Seamless experience with dark mode support and a clean interface that makes tracking effortless' }
     ],
   },
   {
@@ -208,6 +208,11 @@ const apps = [
 				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 				gap: 2rem;
 				margin-bottom: 4rem;
+				grid-auto-rows: 1fr;
+			}
+
+			:global(.app-card-container) {
+				height: 100%;
 			}
 
 			:global(.app-card) {
@@ -218,9 +223,10 @@ const apps = [
 				transition: all 0.3s ease;
 				position: relative;
 				overflow: hidden;
+				min-height: 28.75rem;
 			}
 
-			:global(.app-card:hover) {
+			:global(.app-card-container:not([data-has-details="true"]):hover .app-card) {
 				transform: translateY(-8px);
 				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 			}
@@ -235,8 +241,8 @@ const apps = [
 				font-size: 2.5rem;
 				margin-bottom: 1.5rem;
 				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-					overflow: hidden;
-			object-fit: cover;
+				overflow: hidden;
+			  object-fit: cover;
 			}
 
 
@@ -267,7 +273,7 @@ const apps = [
 			}
 
 			:global(.app-features li) {
-				padding: 0.5rem 0;
+				padding: 0;
 				color: var(--text-secondary);
 				position: relative;
 				padding-left: 1.5rem;
@@ -300,6 +306,10 @@ const apps = [
 		}
 
 		:global(.download-buttons) {
+			position: absolute;
+			bottom: 2rem;
+			left: 2rem;
+			right: 2rem;
 			display: flex;
 			gap: 1rem;
 			flex-wrap: wrap;
