@@ -1,0 +1,321 @@
+---
+const effectiveDate = '2025-12-31';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Privacy Policy - Libre Fasting</title>
+		<meta
+			name="description"
+			content="Privacy policy for the Libre Fasting app. Learn what data is collected, how it is used, and your choices."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main class="page">
+			<header class="hero">
+				<nav class="nav">
+					<a class="nav-link" href="/">← Back to Libre By Design</a>
+				</nav>
+				<h1 class="title">Privacy Policy</h1>
+				<p class="subtitle">Libre Fasting</p>
+				<p class="meta">Effective date: {effectiveDate}</p>
+				<p class="meta-link">
+					Self-link:
+					<a href="https://librebydesign.com/privacy">https://librebydesign.com/privacy</a>
+				</p>
+			</header>
+
+			<section class="card">
+				<p class="lead">
+					Libre Fasting (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your
+					privacy. This policy explains what data the app collects, how it is used, and
+					the choices you have.
+				</p>
+
+				<div class="section">
+					<h2>Definitions</h2>
+					<p>
+						&quot;Collect&quot; refers to transmitting data off the device in a way that allows
+						you and/or your third-party partners to access it for a period longer than
+						necessary to service the transmitted request in real time.
+					</p>
+					<p>
+						&quot;Third-party partners&quot; include analytics tools, advertising networks,
+						third-party SDKs, or other external vendors whose code you have added to the app.
+					</p>
+				</div>
+
+				<div class="section">
+					<h2>Data We Collect</h2>
+					<p>
+						Libre Fasting does not collect any data as defined above. The app stores the
+						following information only on your device:
+					</p>
+					<ul>
+						<li>Fasting data you enter (fast type, start and end times, duration, and completion details).</li>
+						<li>Optional metrics you enter (weight and body fat).</li>
+						<li>App settings (quick fast preference, theme and color choices, notification toggle).</li>
+					</ul>
+				</div>
+
+				<div class="section">
+					<h2>How We Use Data</h2>
+					<p>We use your data solely to provide the app's features, including:</p>
+					<ul>
+						<li>Tracking your fasting sessions and progress.</li>
+						<li>Showing your history and completion stats.</li>
+						<li>Scheduling reminders if you enable notifications.</li>
+						<li>Exporting your history when you choose to share it.</li>
+					</ul>
+				</div>
+
+				<div class="section">
+					<h2>Data Storage and Sharing</h2>
+					<ul>
+						<li>All data is stored locally on your device.</li>
+						<li>We do not collect, transmit, store, or sell your data on any server.</li>
+						<li>We do not use analytics, advertising, or tracking SDKs.</li>
+						<li>We do not share your data with third-party partners.</li>
+						<li>If you export your history, you choose where it goes using your device's share options.</li>
+					</ul>
+				</div>
+
+				<div class="section">
+					<h2>Notifications</h2>
+					<p>
+						If you enable reminders, the app schedules local notifications on your device. We
+						do not send push notifications or collect device tokens. You can turn reminders off
+						at any time in Settings.
+					</p>
+				</div>
+
+				<div class="section">
+					<h2>Data Retention</h2>
+					<p>
+						Your data remains on your device until you delete it in the app or uninstall the
+						app, which removes locally stored data.
+					</p>
+				</div>
+
+				<div class="section">
+					<h2>Children's Privacy</h2>
+					<p>
+						Libre Fasting is not directed to children under 13, and we do not knowingly collect
+						personal information from children.
+					</p>
+				</div>
+
+				<div class="section">
+					<h2>Changes to This Policy</h2>
+					<p>We may update this policy from time to time. Any changes will be posted here with a revised effective date.</p>
+				</div>
+
+				<div class="section">
+					<h2>Contact</h2>
+					<p>
+						If you have questions about this policy, contact us at
+						<span class="contact">hi [at] librebydesign [dot] com</span>.
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<style>
+			:root {
+				--bg-deep: #0a0a0a;
+				--bg-glow: #11151b;
+				--card: rgba(22, 25, 30, 0.9);
+				--border: rgba(255, 255, 255, 0.08);
+				--text-primary: #f7f7f7;
+				--text-secondary: #a5adba;
+				--accent: #ffd93d;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				min-height: 100vh;
+				font-family: 'Inter', sans-serif;
+				color: var(--text-primary);
+				background:
+					radial-gradient(circle at top right, rgba(78, 205, 196, 0.18), transparent 55%),
+					radial-gradient(circle at 12% 20%, rgba(255, 217, 61, 0.14), transparent 45%),
+					linear-gradient(180deg, var(--bg-deep), var(--bg-glow));
+				line-height: 1.7;
+			}
+
+			.page {
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 2.5rem 1.5rem 4rem;
+			}
+
+			.hero {
+				padding: 1rem 0 2.5rem;
+				text-align: left;
+				animation: rise 0.8s ease forwards;
+			}
+
+			.nav {
+				margin-bottom: 2.5rem;
+			}
+
+			.nav-link {
+				color: var(--text-secondary);
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 0.95rem;
+				transition: color 0.2s ease;
+			}
+
+			.nav-link:hover {
+				color: var(--text-primary);
+			}
+
+			.title {
+				font-family: 'Poppins', sans-serif;
+				font-size: clamp(2.4rem, 5vw, 3.5rem);
+				font-weight: 800;
+				letter-spacing: -0.02em;
+				margin-bottom: 0.5rem;
+			}
+
+			.subtitle {
+				font-size: 1.2rem;
+				color: var(--text-secondary);
+				margin-bottom: 0.75rem;
+			}
+
+			.meta {
+				font-size: 0.95rem;
+				color: var(--accent);
+				font-weight: 600;
+			}
+
+			.meta-link {
+				margin-top: 0.4rem;
+				font-size: 0.9rem;
+				color: var(--text-secondary);
+			}
+
+			.meta-link a {
+				color: var(--text-primary);
+				text-decoration: none;
+			}
+
+			.meta-link a:hover {
+				text-decoration: underline;
+			}
+
+			.card {
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 20px;
+				padding: 2.5rem;
+				box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+				animation: fadeIn 1s ease forwards;
+			}
+
+			.lead {
+				font-size: 1.05rem;
+				color: var(--text-secondary);
+				margin-bottom: 2rem;
+			}
+
+			.section {
+				margin-bottom: 2rem;
+			}
+
+			.section:last-child {
+				margin-bottom: 0;
+			}
+
+			h2 {
+				font-family: 'Poppins', sans-serif;
+				font-size: 1.35rem;
+				margin-bottom: 0.75rem;
+				color: var(--text-primary);
+			}
+
+			p {
+				color: var(--text-secondary);
+				margin-bottom: 0.75rem;
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 0;
+				color: var(--text-secondary);
+			}
+
+			li {
+				margin-bottom: 0.6rem;
+				padding-left: 1.4rem;
+				position: relative;
+			}
+
+			li::before {
+				content: '•';
+				position: absolute;
+				left: 0;
+				color: var(--accent);
+				font-weight: 700;
+			}
+
+			.contact {
+				color: var(--text-primary);
+				font-weight: 600;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(12px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes rise {
+				from {
+					opacity: 0;
+					transform: translateY(6px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@media (max-width: 640px) {
+				.page {
+					padding: 2rem 1rem 3rem;
+				}
+
+				.card {
+					padding: 1.75rem;
+				}
+
+				.nav {
+					margin-bottom: 1.5rem;
+				}
+			}
+		</style>
+	</body>
+</html>
