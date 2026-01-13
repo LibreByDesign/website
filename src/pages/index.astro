@@ -225,6 +225,8 @@ const apps = [
 				position: relative;
 				overflow: hidden;
 				min-height: 28.75rem;
+				display: flex;
+				flex-direction: column;
 			}
 
 			:global(.app-card-container:not([data-has-details="true"]):hover .app-card) {
@@ -310,10 +312,6 @@ const apps = [
 		}
 
 		:global(.download-buttons) {
-			position: absolute;
-			bottom: 2rem;
-			left: 2rem;
-			right: 2rem;
 			--store-btn-min: clamp(120px, 16vw, 150px);
 			--store-btn-max: clamp(190px, 26vw, 240px);
 			--store-btn-gap: clamp(0.4rem, 1vw, 0.9rem);
@@ -323,6 +321,7 @@ const apps = [
 			gap: var(--store-btn-gap);
 			flex-wrap: wrap;
 			justify-content: center;
+			margin-top: auto;
 		}
 
 		:global(.store-btn) {
@@ -351,7 +350,6 @@ const apps = [
 		}
 
 		:global(a.store-btn) {
-			cursor: pointer;
 			text-decoration: none;
 		}
 
