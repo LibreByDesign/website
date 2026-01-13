@@ -5,8 +5,10 @@ const apps = [
   {
     name: 'Libre Fasting',
     description: 'Your personal fasting tracker for a healthier lifestyle',
-    icon: '🔥',
+    icon: '/fasting-icon.png',
     color: '#ba6bffff',
+    appStoreUrl: 'https://apps.apple.com/us/app/libre-fasting/id6754898343',
+    comingSoon: false,
     features: [
       { short: 'Smart timer tracking', detail: 'Track Your Fasting Journey with Precision - Smart timer with milestone notifications and progress tracking that automatically extends beyond your target time to measure your achievement' },
       { short: 'Health metrics monitoring', detail: 'Monitor Your Health Transformation - Log weight and body fat measurements with each fast to visualize your progress over time' },
@@ -242,17 +244,20 @@ const apps = [
 				margin-bottom: 1.5rem;
 				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 				overflow: hidden;
-			  object-fit: cover;
+				object-fit: cover;
 			}
 
+			:global(.app-icon[data-icon-type="image"]) {
+				background: rgba(255, 255, 255, 0.08);
+				border: 1px solid rgba(255, 255, 255, 0.18);
+			}
 
-
-		:global(.app-icon-image) {
-			width: 100px;
-			height: 100px;
-			margin-bottom: 1.5rem;
-			display: block;
-		}
+			:global(.app-icon-image) {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-fit: contain;
+			}
 
 		:global(.app-name) {
 				font-family: 'Poppins', sans-serif;
@@ -310,25 +315,33 @@ const apps = [
 			bottom: 2rem;
 			left: 2rem;
 			right: 2rem;
+			--store-btn-min: clamp(120px, 16vw, 150px);
+			--store-btn-max: clamp(190px, 26vw, 240px);
+			--store-btn-gap: clamp(0.4rem, 1vw, 0.9rem);
+			--store-btn-pad-y: clamp(0.65rem, 0.95vw, 0.85rem);
+			--store-btn-pad-x: clamp(0.65rem, 1.2vw, 1.1rem);
 			display: flex;
-			gap: 1rem;
+			gap: var(--store-btn-gap);
 			flex-wrap: wrap;
+			justify-content: center;
 		}
 
 		:global(.store-btn) {
-			flex: 1;
-			min-width: 140px;
+			flex: 1 1 var(--store-btn-min);
+			min-width: var(--store-btn-min);
+			max-width: var(--store-btn-max);
+			width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 0.5rem;
-			padding: 0.9rem 1.2rem;
+			gap: var(--store-btn-gap);
+			padding: var(--store-btn-pad-y) var(--store-btn-pad-x);
 			border: 2px solid #404040;
 			border-radius: 12px;
 			background: rgba(64, 64, 64, 0.2);
 			color: #666;
 			font-weight: 600;
-			font-size: 0.9rem;
+			font-size: clamp(0.75rem, 0.95vw, 0.9rem);
 			cursor: not-allowed;
 			transition: all 0.3s ease;
 			font-family: 'Inter', sans-serif;
@@ -338,9 +351,22 @@ const apps = [
 			opacity: 0.5;
 		}
 
+		:global(a.store-btn) {
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		:global(.store-btn-enabled) {
+			cursor: pointer;
+			color: #f5f0ff;
+			border-color: rgba(186, 107, 255, 0.7);
+			background: rgba(186, 107, 255, 0.18);
+			box-shadow: 0 0 0 1px rgba(186, 107, 255, 0.25) inset;
+		}
+
 		:global(.store-icon) {
-			width: 20px;
-			height: 20px;
+			width: clamp(18px, 1.6vw, 20px);
+			height: clamp(18px, 1.6vw, 20px);
 		}
 
 	.about-section {
