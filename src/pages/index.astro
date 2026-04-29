@@ -239,7 +239,7 @@ const apps = [
 				transition: all 0.3s ease;
 				position: relative;
 				overflow: hidden;
-				min-height: 28.75rem;
+				min-height: 31.5rem;
 				display: flex;
 				flex-direction: column;
 			}
@@ -290,7 +290,7 @@ const apps = [
 
 			:global(.app-features) {
 				list-style: none;
-				margin-bottom: 2rem;
+				margin-bottom: 1.75rem;
 			}
 
 			:global(.app-features li) {
@@ -298,6 +298,7 @@ const apps = [
 				color: var(--text-secondary);
 				position: relative;
 				padding-left: 1.5rem;
+				line-height: 1.45;
 			}
 
 			:global(.app-features li::before) {
@@ -326,28 +327,24 @@ const apps = [
 			width: 7rem;
 		}
 
-		:global(.download-buttons) {
-			--store-btn-min: clamp(120px, 16vw, 150px);
-			--store-btn-max: clamp(190px, 26vw, 240px);
-			--store-btn-gap: clamp(0.4rem, 1vw, 0.9rem);
-			--store-btn-pad-y: clamp(0.65rem, 0.95vw, 0.85rem);
-			--store-btn-pad-x: clamp(0.65rem, 1.2vw, 1.1rem);
-			display: flex;
-			gap: var(--store-btn-gap);
-			flex-wrap: wrap;
-			justify-content: center;
-			margin-top: auto;
-		}
+			:global(.download-buttons) {
+				--store-btn-gap: clamp(0.45rem, 1vw, 0.75rem);
+				--store-btn-pad-y: clamp(0.6rem, 0.9vw, 0.8rem);
+				--store-btn-pad-x: clamp(0.5rem, 1vw, 0.85rem);
+				display: flex;
+				gap: var(--store-btn-gap);
+				flex-wrap: nowrap;
+				justify-content: center;
+				margin-top: auto;
+			}
 
-		:global(.store-btn) {
-			flex: 1 1 var(--store-btn-min);
-			min-width: var(--store-btn-min);
-			max-width: var(--store-btn-max);
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: var(--store-btn-gap);
+			:global(.store-btn) {
+				flex: 1 1 0;
+				min-width: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: var(--store-btn-gap);
 			padding: var(--store-btn-pad-y) var(--store-btn-pad-x);
 			border: 2px solid #404040;
 			border-radius: 12px;
@@ -476,7 +473,17 @@ const apps = [
 				.hero {
 					padding: 2rem 0 3rem;
 				}
-}
+			}
+
+			@media (max-width: 380px) {
+				:global(.download-buttons) {
+					flex-direction: column;
+				}
+
+				:global(.store-btn) {
+					width: 100%;
+				}
+			}
 
 	.about-section {
 			padding: 1.5rem;
