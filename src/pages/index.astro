@@ -327,24 +327,24 @@ const apps = [
 			width: 7rem;
 		}
 
-			:global(.download-buttons) {
-				--store-btn-gap: clamp(0.45rem, 1vw, 0.75rem);
-				--store-btn-pad-y: clamp(0.6rem, 0.9vw, 0.8rem);
-				--store-btn-pad-x: clamp(0.5rem, 1vw, 0.85rem);
-				display: flex;
-				gap: var(--store-btn-gap);
-				flex-wrap: nowrap;
-				justify-content: center;
-				margin-top: auto;
-			}
+		:global(.download-buttons) {
+			--store-btn-gap: clamp(0.45rem, 1vw, 0.75rem);
+			--store-btn-pad-y: clamp(0.6rem, 0.9vw, 0.8rem);
+			--store-btn-pad-x: clamp(0.5rem, 1vw, 0.85rem);
+			display: flex;
+			gap: var(--store-btn-gap);
+			flex-wrap: nowrap;
+			justify-content: center;
+			margin-top: auto;
+		}
 
-			:global(.store-btn) {
-				flex: 1 1 0;
-				min-width: 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: var(--store-btn-gap);
+		:global(.store-btn) {
+			flex: 1 1 0;
+			min-width: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: var(--store-btn-gap);
 			padding: var(--store-btn-pad-y) var(--store-btn-pad-x);
 			border: 2px solid #404040;
 			border-radius: 12px;
