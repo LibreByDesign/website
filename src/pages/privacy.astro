@@ -1,5 +1,7 @@
 ---
 const effectiveDate = '2025-12-31';
+const coveredApps = ['Libre Fasting', 'Libre Pregnancy', 'Libre Maze'];
+const coveredAppsText = coveredApps.join(', ');
 ---
 
 <html lang="en">
@@ -8,10 +10,10 @@ const effectiveDate = '2025-12-31';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Privacy Policy - Libre Fasting</title>
+		<title>Privacy Policy - Libre By Design Apps</title>
 		<meta
 			name="description"
-			content="Privacy policy for the Libre Fasting app. Learn what data is collected, how it is used, and your choices."
+			content={`Privacy policy for ${coveredAppsText}. Learn what data is collected, how it is used, and your choices.`}
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +29,7 @@ const effectiveDate = '2025-12-31';
 					<a class="nav-link" href="/">← Back to Libre By Design</a>
 				</nav>
 				<h1 class="title">Privacy Policy</h1>
-				<p class="subtitle">Libre Fasting</p>
+				<p class="subtitle">{coveredAppsText}</p>
 				<p class="meta">Effective date: {effectiveDate}</p>
 				<p class="meta-link">
 					Self-link:
@@ -37,8 +39,8 @@ const effectiveDate = '2025-12-31';
 
 			<section class="card">
 				<p class="lead">
-					Libre Fasting (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your
-					privacy. This policy explains what data the app collects, how it is used, and
+					{coveredAppsText} (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respect your
+					privacy. This policy explains what data the apps collect, how it is used, and
 					the choices you have.
 				</p>
 
