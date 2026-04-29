@@ -132,6 +132,7 @@ const hasBackContent = hasDetailedFeatures || hasBackDescription;
   .app-card-flipper {
     position: relative;
     width: 100%;
+    display: grid;
     transition: transform 0.6s;
     transform-style: preserve-3d;
   }
@@ -142,27 +143,44 @@ const hasBackContent = hasDetailedFeatures || hasBackDescription;
 
   .app-card-front,
   .app-card-back {
+    grid-area: 1 / 1;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
   }
 
   .app-card-front {
     position: relative;
     visibility: visible;
+    opacity: 1;
+    z-index: 2;
   }
 
   .app-card-container.flipped .app-card-front {
     visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .app-card-container.flipped .info-icon {
+    visibility: hidden;
+    opacity: 0;
   }
 
   .app-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    z-index: 1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+  }
+
+  .app-card-container.flipped .app-card-back {
+    z-index: 3;
   }
 
   .info-icon {
@@ -248,6 +266,7 @@ const hasBackContent = hasDetailedFeatures || hasBackDescription;
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-50%) scale(1.1);
   }
+
 </style>
 
 <script>
