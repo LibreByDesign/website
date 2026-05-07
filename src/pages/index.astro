@@ -61,9 +61,16 @@ const apps = [
   {
     name: 'Libre Humidor',
     description: 'Manage your cigar collection like a pro',
-    icon: '💨',
+    icon: '/libre-humidor-icon.jpg',
     color: '#95E1D3',
-    features: ['Collection inventory', 'Humidity tracking', 'Tasting notes', 'Aging tracker'],
+    appStoreUrl: 'https://apps.apple.com/us/app/libre-humidor/id6763348490',
+    comingSoon: false,
+    features: [
+      { short: 'Cigar inventory', detail: 'Track cigar brand, name, vitola, quantity, cost, notes, acquired date, favorites, smoked sessions, ratings, and optional smoke timer details in one private ledger.' },
+      { short: 'Multiple humidors', detail: 'Organize cigars by humidor, filter inventory by location, and keep your collection records useful across every box without accounts or cloud sync.' },
+      { short: 'Hauls, age, cost tracking', detail: 'Log new hauls with acquired dates and costs, then review resting age, average cost, current stock, and total collection value.' },
+      { short: 'Advanced statistics', detail: 'Search, sort, filter, import and export CSV files, customize swipe actions, choose themes and display density, and keep all data on your device.' },
+    ],
   },
 ];
 ---
